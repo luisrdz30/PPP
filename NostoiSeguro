@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quieres ser mi novia :3</h1>
+    <button id="yesButton">Tí</button>
+    <button id="noButton">No</button>
+    <script>
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+
+        function no() {
+            alert("Ya lo sabía uwu");
+        }
+
+        function motionMouse() {
+            const maxX = window.innerWidth - 100;
+            const maxY = window.innerHeight - 50;
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+            noButton.style.left = `${newX}px`;
+            noButton.style.top = `${newY}px`;
+        }
+
+        noButton.addEventListener("mouseover", motionMouse);
+        yesButton.addEventListener("click", no);
+    </script>
+</body>
+</html>
